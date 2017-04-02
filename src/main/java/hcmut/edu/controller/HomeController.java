@@ -5,6 +5,7 @@ package hcmut.edu.controller;
  */
 import java.util.function.Supplier;
 
+import com.mongodb.util.JSON;
 import hcmut.edu.ApplicationRepositoryUtil;
 import hcmut.edu.model.ResponseObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,15 @@ public class HomeController {
         System.out.println(applicationRepositoryUtil.getCustomerRepository().findByEmail2("bona@gmail.com").getPassword());
         responseObject.setMessage("Sample Data Object");
         return in;
-
+    }
+    @RequestMapping(value = "/testGet",method = RequestMethod.GET)
+    public ResponseObject testGet(){
+        ResponseObject a = new ResponseObject();
+        a.setMessage("Get successfully!!");
+        return a;
+    }
+    @RequestMapping(value = "/testPost",method = RequestMethod.POST)
+    public ResponseObject testPost(@RequestBody ResponseObject body){
+        return body;
     }
 }
