@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class TS2Chart {
-    public static void TS2ChartFile(double[] array)throws Exception{
+    public static void TS2ChartFile(double[] array,String fileName)throws Exception{
         final TimeSeries series = new TimeSeries("Random Data");
         Second current = new Second();
         for (int i =0;i <array.length;i++){
@@ -34,10 +34,10 @@ public class TS2Chart {
                 false,
                 false);
 
-        int width = 800; /* Width of the image */
+        int width = 3000; /* Width of the image */
         int height = 400; /* Height of the image */
         File timeChart = new File(
-                "C:\\Users\\bonamana2811\\Desktop\\Projects\\SAX-master\\ptdb\\char_chart.jpeg");
+                "C:\\Users\\bonamana2811\\Desktop\\Projects\\SAX-master\\ptdb\\"+fileName+".jpeg");
         System.out.println("Converted ");
         ChartUtilities.saveChartAsJPEG(timeChart, timechart, width, height);
 
@@ -116,10 +116,10 @@ public class TS2Chart {
                 false,
                 false);
 
-        int width = 800; /* Width of the image */
+        int width = 2000; /* Width of the image */
         int height = 400; /* Height of the image */
         File timeChart = new File(
-                "C:\\Users\\bonamana2811\\Desktop\\Projects\\SAX-master\\ptdb\\char_chart.jpeg");
+                "C:\\Users\\bonamana2811\\Desktop\\Projects\\SAX-master\\ptdb\\symbol_chart.jpeg");
         System.out.println("Converted ");
         ChartUtilities.saveChartAsJPEG(timeChart, timechart, width, height);
     }

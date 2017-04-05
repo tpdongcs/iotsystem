@@ -1,5 +1,7 @@
 package net.seninp.jmotif.sax.datastructure;
 
+import net.seninp.jmotif.sax.alphabet.NormalAlphabet;
+
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -288,6 +290,16 @@ public class SAXRecords implements Iterable<SAXRecord> {
    */
   public Collection<SAXRecord> getRecords() {
     return this.records.values();
+  }
+
+  /**
+   * Get access to Chunked Indexed.
+   *
+   * @return Indexes.
+   */
+  public SAXRecord getRecord(int pos) {
+    String key = String.valueOf(NormalAlphabet.ALPHABET[pos]);
+    return this.records.get(key);
   }
 
 }

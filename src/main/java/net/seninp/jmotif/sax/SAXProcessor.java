@@ -8,6 +8,7 @@ import org.joda.time.Duration;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 /**
