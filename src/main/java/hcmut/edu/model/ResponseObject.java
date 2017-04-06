@@ -1,5 +1,7 @@
 package hcmut.edu.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * Created by bonamana2811 on 3/24/2017.
  */
