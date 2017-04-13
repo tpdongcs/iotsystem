@@ -7,12 +7,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 
 public class ECGObject {
-
+    @JsonProperty("ECGarr")
     private double[] ECGarr;
     @JsonProperty("ECGarr")
     public double[] getECGarr() {return ECGarr;}
-
-    @JsonProperty("ECGarr")
+    
     public void setECGarr(double[] ECGarr) {
         this.ECGarr = ECGarr;
     }

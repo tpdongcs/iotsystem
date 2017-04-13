@@ -3,6 +3,7 @@ package hcmut.edu.model;
 /**
  * Created by bonamana2811 on 3/24/2017.
  */
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -12,24 +13,24 @@ public class User {
 
     @Id
     @Field
-    private String id;
+    private ObjectId id;
 
     @Field("email")
-    private String userName;
+    private String email;
 
     @Field("password")
     private String password;
 
-    public String getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {

@@ -37,7 +37,7 @@ public class TS2Chart {
         int width = 3000; /* Width of the image */
         int height = 400; /* Height of the image */
         File timeChart = new File(
-                "C:\\Users\\bonamana2811\\Desktop\\Projects\\SAX-master\\ptdb\\"+fileName+".jpeg");
+                "C:\\Users\\"+System.getProperty("user.name")+"\\Desktop\\Projects\\SAX-master\\ptdb\\"+fileName+".jpeg");
         System.out.println("Converted ");
         ChartUtilities.saveChartAsJPEG(timeChart, timechart, width, height);
 
