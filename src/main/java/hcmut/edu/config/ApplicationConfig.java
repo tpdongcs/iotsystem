@@ -17,6 +17,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.data.mongodb.repository.query.MongoEntityInformation;
 import org.springframework.data.mongodb.repository.support.MongoRepositoryFactory;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -30,6 +31,7 @@ import java.util.ResourceBundle;
 
 @Configuration
 @EnableWebMvc
+@EnableAsync
 @ComponentScan(basePackages={"hcmut.edu"})
 @EnableMongoRepositories(basePackages={"hcmut.edu.repository"})
 @Import(RepositoryRestMvcConfiguration.class)
@@ -64,4 +66,5 @@ public class ApplicationConfig {
 
         return viewResolver;
     }
+
 }
